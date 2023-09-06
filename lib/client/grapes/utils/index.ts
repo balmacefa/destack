@@ -1,3 +1,26 @@
+/**
+ * Utility Functions
+ *
+ * This module contains a collection of utility functions to support the application.
+ *
+ * Functions:
+ * - elementExists: Checks if a given element exists.
+ * - fetchJSON: Performs an asynchronous HTTP request and returns JSON data.
+ * - escapeName: Fixes CSS class names to be compatible with Tailwind CSS.
+ * - getSvgHtml: Returns the outerHTML of a given SVG element.
+ * - getPngHtml: Returns the outerHTML of a given PNG image element.
+ * - isJsonValid: Checks if a string is a valid JSON.
+ * - getBaseUrl: Returns the base URL based on whether the standalone server is active.
+ * - saveTemplate: Saves a template using an asynchronous HTTP request.
+ * - loadTemplate: Loads a template using an asynchronous HTTP request.
+ * - getPngFromId: Gets a PNG image from a given ID.
+ * - getThemeUrl: Gets the URL of a theme.
+ * - getImageUrl: Gets the URL of an image.
+ * - uploadFile: Uploads a file using an asynchronous HTTP request.
+ *
+ * Language: ISO 639-1 en
+ */
+
 import { standaloneServerPort } from '../../../server/config'
 
 type fetchJSONArgs = {

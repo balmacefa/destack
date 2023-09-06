@@ -1,3 +1,21 @@
+/**
+ * Editor Initialization and Configuration
+ *
+ * This section of code performs the following tasks:
+ *
+ * - Imports required libraries for the editor.
+ * - Imports functions to load components, blocks, panels, and traits into the editor.
+ * - Initializes the editor with specified options.
+ * - Configures asset management through the 'uploadFile' function.
+ * - Adds assetManagerOptions to editorOptions for further customization.
+ * - Imports and applies a function to append additional CSS to the editor.
+ * - Adds an event listener for 'storage:store' to trigger template saving.
+ * - Fetches and parses templates from the database, updating the editor's components and styles accordingly.
+ *
+ * Purpose:
+ * To initialize and configure the editor for both UI and data interaction, while ensuring extensibility and customization.
+ */
+
 import { loadPanels } from '../lib/panels'
 import { loadTraits } from '../lib/traits'
 import { loadComponents } from '../lib/components'
