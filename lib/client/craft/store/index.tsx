@@ -1,3 +1,25 @@
+/**
+ * ThemeProvider and ThemeContext
+ *
+ * This React file performs the following tasks:
+ *
+ * - Imports necessary modules and components, such as React hooks, shared UI components, and utility functions.
+ * - Defines several interfaces for component and context typings.
+ * - Initializes an array of theme data with their names and folder references.
+ * - Creates a ThemeContext using React's createContext API.
+ * - Implements the ThemeProvider functional component, which:
+ *    1. Manages the current theme index and other state variables.
+ *    2. Implements a side-effect to set the initial theme.
+ *    3. Defines a function (updateIndex) to update components and categories based on the selected theme.
+ *
+ * Exports:
+ * - ThemeContext: Context providing access to theme-related variables and functions.
+ * - ThemeProvider: React component that wraps the application to provide the ThemeContext.
+ *
+ * Purpose:
+ * This code initializes and provides a context for theme management across the application. It ensures that the UI components conform to the selected theme and allows for easy switching between different themes.
+ */
+
 import React, { createContext, useState, useEffect } from 'react'
 
 import { Element } from '@craftjs/core'
@@ -21,6 +43,7 @@ const themes = [
   { name: 'Meraki UI', folder: 'meraki-light' },
   { name: 'Preline', folder: 'preline' },
   { name: 'Flowbite', folder: 'flowbite' },
+  // TODO ADD Dynamic themes from data folder
 ]
 
 interface ComponentInterface {

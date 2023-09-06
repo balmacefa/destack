@@ -1,3 +1,39 @@
+// ## File Header
+// This file seems to be part of a larger application designed to provide a UI editor. It includes functionalities for changing themes, colors, updating the canvas, and other editor-related tasks.
+
+// ### Constants
+// 1. `txtConfirm` - Confirmation text when clearing the editor.
+// 2. `colorList` - A list of colors and their respective HEX codes.
+// 3. `themeList` - A list of themes, their folders, and URLs for logos.
+// 4. `colorRegex` - Regular expression to match class names with color-related styling.
+
+// ### Imports
+// 1. Importing images - Different logos for various themes.
+// 2. Importing functions - Import functions for loading basic and theme-specific blocks.
+
+// ### Functions
+
+// #### getUpdateThemeModal(editor: any, standaloneServer: boolean)
+// 1. Creates and returns a modal for updating the theme of the editor.
+
+// #### getUpdateColorModal(editor: any)
+// 1. Creates and returns a modal for updating the color scheme of the editor.
+
+// #### getAllComponents(model: any, result = [] as any[])
+// 1. Retrieves all components in a given model and returns them in an array.
+
+// #### updateColor(editor: any, color: string)
+// 1. Updates the color scheme across all components.
+
+// #### updateTheme(editor: any, selectedTheme: any, standaloneServer: boolean)
+// 1. Updates the theme of the editor, including its blocks.
+
+// #### loadPanels(editor: any, isDev: boolean, standaloneServer: boolean)
+// 1. Sets up editor panels and commands for handling various actions like undo, redo, clearing the canvas, etc.
+
+// ### Execution
+// 1. Executing various event listeners and configurations related to the editor UI.
+
 const txtConfirm = "Are you sure you want to clear the editor? This can't be undone."
 
 const colorList = [

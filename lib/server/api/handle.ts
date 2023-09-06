@@ -7,16 +7,6 @@ import fs from 'fs'
 import { formParse, getJson, exists, readdirRecursive } from '../utils'
 import { dataType } from '../../types'
 
-const DEFAULT_TEMPLATE = {
-  ROOT: {
-    type: { resolvedName: 'Container' },
-    isCanvas: true,
-    props: { width: '100%', height: '800px' },
-    displayName: 'Container',
-    custom: { displayName: 'App' },
-  },
-}
-
 const development = process.env.NODE_ENV !== 'production'
 
 const rootPath = process.cwd()
@@ -48,7 +38,23 @@ const getFileNameFromRoute = (route: string) => (route === '/' ? 'default.json' 
 const getRouteFromFilename = (filename: string) =>
   filename === path.sep + 'default.json' ? path.sep : `${filename.slice(0, -5)}` // file paths are OS-specific
 
+// Important
+
+/* The code above does the following:
+1. Check if the file exists
+2. If it does, return the content
+3. If it doesn’t, return a default object */
 const loadData = async (route: string): Promise<dataType> => {
+  const DEFAULT_TEMPLATE = {
+    ROOT: {
+      type: { resolvedName: 'Container' },
+      isCanvas: true,
+      props: { width: '100%', height: '800px' },
+      displayName: 'Container',
+      custom: { displayName: 'App' },
+    },
+  }
+
   const fileName = getFileNameFromRoute(route)
   const dataPath = path.join(rootPath, dataFolder, fileName)
   const dataExists = await exists(dataPath)
