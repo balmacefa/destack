@@ -1,6 +1,10 @@
 {
-  "name": "destack-workspace",
+  "name": "@balmacefa/destack",
   "version": "1.0.0",
+  "repository": "https://github.com/balmacefa/destack.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "workspaces": [
     "./lib",
     "./dev/nextjs-project",
