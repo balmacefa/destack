@@ -4,8 +4,9 @@
 name: Node.js Package
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main # Cambia 'main' al nombre de la rama que deseas supervisar
 
 jobs:
   build:
