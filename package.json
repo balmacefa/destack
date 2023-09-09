@@ -26,6 +26,7 @@
     "screenshots": "npm run screenshots -w scripts",
     "preview": "npm run preview -w scripts",
     "pretty": "pretty-quick --staged",
+    "test": "",
     "test:e2e": "npm run test:e2e:next && npm run test:e2e:react",
     "test:e2e:next": "npm run test:e2e:dev:next && npm run test:e2e:build:next",
     "test:e2e:react": "npm run test:e2e:dev:react && npm run test:e2e:build:react",
